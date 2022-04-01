@@ -6,3 +6,19 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+.ui-items .bi{
+    font-size: 48px;
+    margin-right: 10px;
+}
+
+.ui-items .bi-star:hover::before {
+    content: "\f586";
+    color: #e8a815;
+}
+
+.ui-items .bi-check-circle:hover::before {
+    content: "\f26a";
+    color: #198754;
+}

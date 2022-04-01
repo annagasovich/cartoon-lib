@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CartoonController;
+use App\Http\Controllers\GenreController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/{id}', [CartoonController::class, 'index']);
+
+Route::get('/genres/{id}', [GenreController::class, 'index']);
+
+Auth::routes();

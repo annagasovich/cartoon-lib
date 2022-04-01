@@ -1,2 +1,4 @@
-@include('cartoon.icons.featured')
-@include('cartoon.icons.watched')
+<div class="ui-items">
+    <i class="bi bi-star"></i>
+    <i class="bi bi-check-circle"></i>
+</div>

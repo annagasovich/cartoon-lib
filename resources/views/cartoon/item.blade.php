@@ -55,7 +55,7 @@
                         </tr>
                         <tr>
                             <td>Жанры</td>
-                            <td>{{ '-' }}</td>
+                            <td>@include('parts.tag_list', ['data' => $cartoon->genres])</td>
                         </tr>
                         <tr>
                             <td>Тип анимации</td>
@@ -69,24 +69,14 @@
 
             <h2>Похожее:</h2>
             <div id="cartoon-similar" class="row">
+                @foreach($cartoon->similar() as $similar)
                 <div class="col-md-3">
-                    @include('cartoon.parts.similar_item')
+                    @include('cartoon.parts.similar_item', ['item' => $similar])
                 </div>
-                <div class="col-md-3">
-                    @include('cartoon.parts.similar_item')
-                </div>
-                <div class="col-md-3">
-                    @include('cartoon.parts.similar_item')
-                </div>
-                <div class="col-md-3">
-                    @include('cartoon.parts.similar_item')
-                </div>
-
+                @endforeach
             </div>
         </div>
     </div>
-
-
 
 
 <script>
